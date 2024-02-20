@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalAdvicer {
 
     @ExceptionHandler(Throwable.class)
-    public BaseResponse handleException(Exception e) {
+    public BaseResponse handleException(Throwable e) {
         return new BaseResponse(e.getMessage(), HttpStatus.BAD_REQUEST);
     }
 
